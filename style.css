@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #ffffffde;
+    background-color: #5f5f5f;
+}
+
+#app {
+    width: 100%;
+    padding: 0%;
+    /* height: 100vh; */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+canvas {
+    margin: 0px;
+    margin-top: 0px;
+}
+
+@font-face {
+    font-family: "Glory ExtraBold";
+    src: url("assets/fonts/glory-extra-bold.ttf") format("ttf");
+    font-weight: 800;
+}

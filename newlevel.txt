@@ -1,0 +1,7 @@
+0. A background for MenuScene
+1. Far from the screen like background 
+2. new assets 
+3. gravity will be increased
+4. new assets will be smaller
+5. We can use bomb hit as a punishment 
+6. need more point in higher level
