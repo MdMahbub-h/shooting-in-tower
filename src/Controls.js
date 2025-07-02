@@ -41,39 +41,46 @@ export default class Controls {
 
         // Mobile controls - create buttons using Phaser 3 Game Objects and input handlers
         this.arrowLeft = scene.add
-            .image(0, 480, "left")
+            .image(this.scale.width * 0.07, this.scale.height * 0.82, "left")
             .setInteractive()
-            .setScale(2.5)
+            .setScale(2)
+            .setDepth(8)
             .setScrollFactor(0);
         this.arrowRight = scene.add
-            .image(140, 480, "right")
+            .image(this.scale.width * 0.23, this.scale.height * 0.82, "right")
             .setInteractive()
-            .setScale(2.5)
+            .setScale(2)
+            .setDepth(8)
             .setScrollFactor(0);
         this.arrowDown = scene.add
-            .image(70, 595, "down")
+            .image(this.scale.width * 0.15, this.scale.height * 0.9, "down")
             .setInteractive()
-            .setScale(2.5)
+            .setScale(2)
+            .setDepth(8)
             .setScrollFactor(0);
         this.btnShoot = scene.add
-            .image(1100, 540, "shoot")
+            .image(this.scale.width * 0.85, this.scale.height * 0.9, "shoot")
             .setInteractive()
+            .setScale(0.8)
+            .setDepth(8)
             .setScrollFactor(0);
         this.btnJump = scene.add
-            .image(1100, 360, "jump")
+            .image(this.scale.width * 0.85, this.scale.height * 0.78, "jump")
             .setInteractive()
+            .setScale(0.8)
+            .setDepth(8)
             .setScrollFactor(0);
         this.btnRestart = scene.add
             .image(this.scale.width * 0.67, 50, "restart")
             .setInteractive()
             .setScrollFactor(0)
             .setDepth(5);
-        this.btnMobileControls = scene.add
-            .image(this.scale.width * 0.61, 50, "showMobileControls")
-            .setInteractive()
-            .setScale(0.5)
-            .setDepth(5)
-            .setScrollFactor(0);
+        // this.btnMobileControls = scene.add
+        //     .image(this.scale.width * 0.61, 50, "showMobileControls")
+        //     .setInteractive()
+        //     .setScale(0.5)
+        //     .setDepth(5)
+        //     .setScrollFactor(0);
 
         // Set visibility
         this.arrowLeft.visible = this.showMobileControls;
@@ -99,11 +106,14 @@ export default class Controls {
 
         this.btnRestart.on("pointerdown", () => scene.scene.restart());
 
-        this.btnMobileControls.on(
-            "pointerdown",
-            this.toggleMobileControls,
-            this
-        );
+        // this.btnMobileControls.on(
+        //     "pointerdown",
+        //     this.toggleMobileControls,
+        //     this
+        // );
+        if (this.scale.height > this.scale.width) {
+            this.toggleMobileControls();
+        }
     }
 
     toggleMobileControls() {
