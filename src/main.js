@@ -11,17 +11,19 @@ import Level1Scene from "./states/Level1";
 
 let width = window.innerWidth;
 let height = window.innerHeight;
-if (width < 1920) {
+console.log(width, height);
+if (height > width) {
+    width = 800;
+    height = 1200;
+} else if (width < 1920) {
     width = window.innerWidth;
     height = (1080 * width) / 1920;
 } else if (height < 1080) {
     height = window.innerHeight;
     width = (1920 * height) / 1080;
 }
-if (height > width) {
-width = 800;
-height = 1200;
-}
+
+console.log(width, height);
 
 const config = {
     type: Phaser.AUTO,
