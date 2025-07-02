@@ -18,6 +18,10 @@ if (width < 1920) {
     height = window.innerHeight;
     width = (1920 * height) / 1080;
 }
+if (height > width) {
+width = 800;
+height = 1200;
+}
 
 const config = {
     type: Phaser.AUTO,
