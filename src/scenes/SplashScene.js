@@ -21,7 +21,7 @@ export class SplashScene extends Scene {
             .setOrigin(0.5, 0.8)
             .setScale(0.1);
         if (this.isMobile) {
-            logo.setScale(0.6);
+            logo.setScale(0.2);
         }
         const fx = logo.postFX.addShine(0.5, 0.2, 5);
 
