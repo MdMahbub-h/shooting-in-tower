@@ -100,6 +100,7 @@ export default class Splash extends Phaser.Scene {
 
     create() {
         // Or skip video and go immediately to the next scene
-        this.scene.start("Level1Scene");
+        // this.scene.start("Level1Scene");
+        this.scene.start("GameOverScene");
     }
 }
