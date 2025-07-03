@@ -14,7 +14,7 @@ export class Preloader extends Phaser.Scene {
         this.load.audio("congrats", "congrats.mp3");
         this.load.audio("loseSound", "lose-sound.mp3");
 
-        this.load.video("intro", "intro.mp4", "loadeddata", true, true);
+        // this.load.video("intro", "intro.mp4", "loadeddata", true, true);
     }
 
     create() {
